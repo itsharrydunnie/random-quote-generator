@@ -6,7 +6,8 @@ console.log("building quotes generator");
 
 //Selecting DOM ELEMENTS
 const newQuote = document.querySelector("#new-quote");
-const quote = document.querySelector("#quote");
+const quoteText = document.querySelector("#quote-text");
+const author = document.querySelector(".author");
 
 // Fectch Quote
 const fetchQuote = function () {
@@ -14,7 +15,8 @@ const fetchQuote = function () {
     .then((response) => response.json())
     .then((data) => {
       console.log(`${data.author} said, "${data.content}"`);
-      quote.textContent = data.content;
+      quoteText.textContent = data.content;
+      author.textContent = `-- ${data.author}`;
     });
 };
 
