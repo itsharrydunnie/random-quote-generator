@@ -11,10 +11,14 @@ const author = document.querySelector(".author");
 
 // Fectch Quote
 const fetchQuote = function () {
+  //loading state
+  quoteText.textContent = "...loading";
+  author.textContent = `-- `;
+  //fetching state
   fetch("https://api.quotable.io/random")
     .then((response) => response.json())
     .then((data) => {
-      console.log(`${data.author} said, "${data.content}"`);
+      //display state
       quoteText.textContent = data.content;
       author.textContent = `-- ${data.author}`;
     });
