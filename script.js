@@ -1,8 +1,5 @@
 "use strict";
 console.log("building quotes generator");
-// fetch("https://api.github.com/users/bradtraversy").then((response) =>
-//   console.log(response.json())
-// );
 
 //Selecting DOM ELEMENTS
 const newQuote = document.querySelector("#new-quote");
